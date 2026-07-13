@@ -102,7 +102,7 @@ export default function ContactPage() {
           }}
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-gold-300 text-sm font-semibold uppercase tracking-widest mb-3">Contact</p>
+          <p className="label-caps text-gold-300 mb-4">Contact</p>
           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white max-w-2xl leading-tight mb-4">
             We Would Love to Hear From You
           </h1>
@@ -126,7 +126,7 @@ export default function ContactPage() {
                   return (
                     <div
                       key={c.title}
-                      className="bg-[#FAFAF8] border border-gray-100 hover:border-gold-300 rounded-2xl p-5 transition-all hover:shadow-md"
+                      className="bg-parchment border border-gray-100 hover:border-gold-300 rounded-2xl p-5 transition-all hover:shadow-md"
                     >
                       <div className="w-10 h-10 rounded-xl bg-byzantine-600 flex items-center justify-center mb-3">
                         <Icon className="w-5 h-5 text-gold-400" />
@@ -149,7 +149,7 @@ export default function ContactPage() {
               </div>
 
               {/* Address */}
-              <div className="bg-[#FAFAF8] border border-gray-100 rounded-2xl p-6">
+              <div className="bg-parchment border border-gray-100 rounded-2xl p-6">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl bg-byzantine-600 flex items-center justify-center shrink-0">
                     <MapPin className="w-5 h-5 text-gold-400" />
@@ -175,7 +175,7 @@ export default function ContactPage() {
               </div>
 
               {/* Hours */}
-              <div className="bg-[#FAFAF8] border border-gray-100 rounded-2xl p-6">
+              <div className="bg-parchment border border-gray-100 rounded-2xl p-6">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl bg-byzantine-600 flex items-center justify-center shrink-0">
                     <Clock className="w-5 h-5 text-gold-400" />
@@ -216,7 +216,7 @@ export default function ContactPage() {
             {/* Social sidebar */}
             <div className="space-y-5">
               <div>
-                <p className="text-gold-500 text-sm font-semibold uppercase tracking-widest mb-4">
+                <p className="label-caps text-gold-500 mb-4">
                   Follow Us
                 </p>
                 <div className="space-y-3">
@@ -226,7 +226,7 @@ export default function ContactPage() {
                       href={s.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 bg-[#FAFAF8] border border-gray-100 hover:border-gray-200 hover:shadow-sm rounded-xl p-3.5 transition-all group"
+                      className="flex items-center gap-3 bg-parchment border border-gray-100 hover:border-gray-200 hover:shadow-sm rounded-xl p-3.5 transition-all group"
                     >
                       <div className={`${s.color} w-9 h-9 rounded-lg flex items-center justify-center text-white shrink-0`}>
                         {s.icon}

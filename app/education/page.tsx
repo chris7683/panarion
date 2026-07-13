@@ -86,7 +86,7 @@ export default function EducationPage() {
           }}
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-gold-300 text-sm font-semibold uppercase tracking-widest mb-3">Education</p>
+          <p className="label-caps text-gold-300 mb-4">Education</p>
           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white max-w-2xl leading-tight mb-4">
             Learn the Language of the Fathers
           </h1>
@@ -101,7 +101,7 @@ export default function EducationPage() {
       <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-14">
-            <p className="text-gold-500 text-sm font-semibold uppercase tracking-widest mb-3">
+            <p className="label-caps text-gold-500 mb-4">
               Our Programs
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-byzantine-700 mb-4">
@@ -120,7 +120,7 @@ export default function EducationPage() {
                     : "border-gray-100 hover:border-gold-200 hover:shadow-md"
                 }`}
               >
-                <div className={`p-8 md:p-10 ${program.featured ? "bg-white" : "bg-[#FAFAF8]"}`}>
+                <div className={`p-8 md:p-10 ${program.featured ? "bg-white" : "bg-parchment"}`}>
                   <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
                     <div>
                       <span className={`text-xs font-semibold px-3 py-1 rounded-full ${program.badgeColor}`}>
@@ -172,7 +172,7 @@ export default function EducationPage() {
                     </a>
                     <Link
                       href="/contact"
-                      className="flex items-center gap-2 px-5 py-2.5 bg-[#FAFAF8] hover:bg-gold-50 border border-gray-200 hover:border-gold-300 text-byzantine-700 font-semibold rounded-xl text-sm transition-all"
+                      className="flex items-center gap-2 px-5 py-2.5 bg-parchment hover:bg-gold-50 border border-gray-200 hover:border-gold-300 text-byzantine-700 font-semibold rounded-xl text-sm transition-all"
                     >
                       Ask a Question <ArrowRight className="w-4 h-4" />
                     </Link>
@@ -185,7 +185,7 @@ export default function EducationPage() {
       </section>
 
       {/* Features */}
-      <section className="py-12 sm:py-20 bg-[#FAFAF8]">
+      <section className="py-12 sm:py-20 bg-parchment">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-14">
             <h2 className="font-serif text-3xl font-bold text-byzantine-700">

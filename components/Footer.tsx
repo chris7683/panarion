@@ -5,12 +5,16 @@ import { Mail, Phone, MapPin, Facebook, Youtube } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="bg-byzantine-900 text-white">
+      {/* Divider rule */}
+      <div className="border-t-2 border-gold-400/30" />
+
       {/* Main footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="mb-4">
+            <div className="mb-5">
               <div className="bg-white/95 rounded-xl px-3 py-2 inline-block">
                 <Image
                   src="/logo.png"
@@ -21,17 +25,28 @@ export default function Footer() {
                 />
               </div>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
+
+            {/* Greek name display */}
+            <div className="mb-4">
+              <div className="font-serif italic text-gold-400/70 text-lg">Πανάριον</div>
+              <div className="font-cinzel text-white/30 text-[0.58rem] tracking-[0.2em] uppercase">
+                Medicine Chest · Est. 2006
+              </div>
+            </div>
+
+            <p className="text-gray-400 text-sm leading-relaxed mb-5">
               A medicine cabinet for the mind and heart — preserving and sharing Eastern Christian
               patristic heritage through scholarship, publishing, and education since 2006.
             </p>
-            {/* Social */}
-            <div className="flex gap-3 mt-5">
+
+            {/* Social icons */}
+            <div className="flex gap-2.5 mt-4">
               <a
                 href="https://www.facebook.com/panarion"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-byzantine-700 hover:bg-gold-400 flex items-center justify-center transition-colors"
+                aria-label="Facebook"
               >
                 <Facebook className="w-4 h-4" />
               </a>
@@ -40,6 +55,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-byzantine-700 hover:bg-gold-400 flex items-center justify-center transition-colors"
+                aria-label="YouTube"
               >
                 <Youtube className="w-4 h-4" />
               </a>
@@ -70,20 +86,20 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-serif font-semibold text-white mb-4 text-base">Quick Links</h3>
+            <h3 className="font-cinzel text-[0.65rem] tracking-[0.2em] uppercase text-gold-400/80 mb-5">Quick Links</h3>
             <ul className="space-y-2.5">
               {[
-                { label: "About Panarion", href: "/about" },
-                { label: "Publishing", href: "/publishing" },
-                { label: "Education", href: "/education" },
-                { label: "Shop", href: "/shop" },
-                { label: "Academic Discussions", href: "/about#discussions" },
-                { label: "Digital Library", href: "/shop" },
+                { label: "About Panarion",      href: "/about" },
+                { label: "Publishing",          href: "/publishing" },
+                { label: "Education",           href: "/education" },
+                { label: "Shop",                href: "/shop" },
+                { label: "Academic Discussions",href: "/about#discussions" },
+                { label: "Digital Library",     href: "/shop" },
               ].map((item) => (
                 <li key={item.label}>
                   <Link
                     href={item.href}
-                    className="text-gray-400 hover:text-gold-400 text-sm transition-colors"
+                    className="text-gray-400 hover:text-gold-400 text-sm transition-colors font-sans leading-relaxed"
                   >
                     {item.label}
                   </Link>
@@ -94,7 +110,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-serif font-semibold text-white mb-4 text-base">Our Services</h3>
+            <h3 className="font-cinzel text-[0.65rem] tracking-[0.2em] uppercase text-gold-400/80 mb-5">Our Services</h3>
             <ul className="space-y-2.5">
               {[
                 "Patristic Translations",
@@ -105,7 +121,7 @@ export default function Footer() {
                 "E-Learning Platform",
               ].map((item) => (
                 <li key={item} className="text-gray-400 text-sm flex items-start gap-2">
-                  <span className="text-gold-400 mt-0.5">›</span>
+                  <span className="text-gold-400/60 mt-0.5 shrink-0">›</span>
                   {item}
                 </li>
               ))}
@@ -114,18 +130,21 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-serif font-semibold text-white mb-4 text-base">Contact Us</h3>
-            <ul className="space-y-3">
+            <h3 className="font-cinzel text-[0.65rem] tracking-[0.2em] uppercase text-gold-400/80 mb-5">Contact Us</h3>
+            <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm text-gray-400">
-                <MapPin className="w-4 h-4 text-gold-400 mt-0.5 shrink-0" />
-                <span>7A Al-Sabbagh Street, off Al-Ahram Street, Korba – Heliopolis, Cairo, Egypt (2nd Floor)</span>
+                <MapPin className="w-4 h-4 text-gold-400/60 mt-0.5 shrink-0" />
+                <span className="leading-relaxed">
+                  7A Al-Sabbagh Street, off Al-Ahram Street,<br />
+                  Korba – Heliopolis, Cairo, Egypt (2nd Floor)
+                </span>
               </li>
               <li>
                 <a
                   href="tel:01220020525"
                   className="flex items-center gap-3 text-sm text-gray-400 hover:text-gold-400 transition-colors"
                 >
-                  <Phone className="w-4 h-4 text-gold-400 shrink-0" />
+                  <Phone className="w-4 h-4 text-gold-400/60 shrink-0" />
                   +20 122 002 0525
                 </a>
               </li>
@@ -134,7 +153,7 @@ export default function Footer() {
                   href="tel:0224146374"
                   className="flex items-center gap-3 text-sm text-gray-400 hover:text-gold-400 transition-colors"
                 >
-                  <Phone className="w-4 h-4 text-gold-400 shrink-0" />
+                  <Phone className="w-4 h-4 text-gold-400/60 shrink-0" />
                   +20 22 414 6374
                 </a>
               </li>
@@ -143,7 +162,7 @@ export default function Footer() {
                   href="mailto:info@panarion.org"
                   className="flex items-center gap-3 text-sm text-gray-400 hover:text-gold-400 transition-colors"
                 >
-                  <Mail className="w-4 h-4 text-gold-400 shrink-0" />
+                  <Mail className="w-4 h-4 text-gold-400/60 shrink-0" />
                   info@panarion.org
                 </a>
               </li>
@@ -153,12 +172,12 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-byzantine-700">
+      <div className="border-t border-byzantine-700/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row justify-between items-center gap-2">
-          <p className="text-gray-500 text-xs">
-            © 2026 Panarion Center for Patristic Heritage. All Rights Reserved.
+          <p className="text-gray-600 text-xs font-cinzel tracking-wider uppercase">
+            © 2026 Panarion Center · All Rights Reserved
           </p>
-          <p className="text-gray-600 text-xs">
+          <p className="text-gray-700 text-xs font-serif italic">
             Established July 10, 2006 — Feast of Saint Cyril the Great
           </p>
         </div>

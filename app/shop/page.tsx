@@ -110,7 +110,7 @@ export default function ShopPage() {
           }}
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-gold-300 text-sm font-semibold uppercase tracking-widest mb-3">Shop</p>
+          <p className="label-caps text-gold-300 mb-4">Shop</p>
           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white max-w-2xl leading-tight mb-4">
             Browse Our Publications
           </h1>
@@ -154,7 +154,7 @@ export default function ShopPage() {
       <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-14">
-            <p className="text-gold-500 text-sm font-semibold uppercase tracking-widest mb-3">
+            <p className="label-caps text-gold-500 mb-4">
               Featured
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-byzantine-700 mb-4">
@@ -167,7 +167,7 @@ export default function ShopPage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {featured.map((book) => (
-              <div key={book.title} className="group bg-[#FAFAF8] border border-gray-100 hover:border-gold-300 rounded-2xl overflow-hidden transition-all hover:shadow-lg">
+              <div key={book.title} className="group bg-parchment border border-gray-100 hover:border-gold-300 rounded-2xl overflow-hidden transition-all hover:shadow-lg">
                 {/* Book cover */}
                 <div className={`bg-gradient-to-br ${book.coverColor} p-8 flex flex-col justify-between h-44 relative overflow-hidden`}>
                   <div className="absolute inset-0 opacity-5" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M20 18v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z'/%3E%3C/g%3E%3C/svg%3E")` }} />
@@ -198,10 +198,10 @@ export default function ShopPage() {
       </section>
 
       {/* Categories */}
-      <section className="py-12 sm:py-20 bg-[#FAFAF8]">
+      <section className="py-12 sm:py-20 bg-parchment">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-14">
-            <p className="text-gold-500 text-sm font-semibold uppercase tracking-widest mb-3">
+            <p className="label-caps text-gold-500 mb-4">
               Catalog
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-byzantine-700 mb-4">
@@ -242,11 +242,11 @@ export default function ShopPage() {
       </section>
 
       {/* Visit Us */}
-      <section className="py-12 sm:py-20 bg-[#FAFAF8]">
+      <section className="py-12 sm:py-20 bg-parchment">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <div>
-              <p className="text-gold-500 text-sm font-semibold uppercase tracking-widest mb-3">
+              <p className="label-caps text-gold-500 mb-4">
                 In-Store
               </p>
               <h2 className="font-serif text-3xl sm:text-4xl font-bold text-byzantine-700 mb-5">

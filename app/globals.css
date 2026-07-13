@@ -1,12 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cairo:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Cinzel:wght@400;500;600;700;900&family=Scheherazade+New:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --font-inter: 'Inter', system-ui, sans-serif;
-  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-garamond:  'EB Garamond', Georgia, serif;
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+  --font-playfair:  'Playfair Display', Georgia, serif;
+  --font-cinzel:    'Cinzel', Georgia, serif;
+  --parchment:      #F8F3E6;
+  --parchment-dark: #EDE6CF;
+  --ink:            #1A1208;
+  --gold:           #C9A84C;
 }
 
 * {
@@ -18,14 +24,40 @@ html {
 }
 
 body {
-  font-family: var(--font-inter);
-  color: #1A1A1A;
-  background-color: #FAFAF8;
+  font-family: var(--font-garamond);
+  color: var(--ink);
+  background-color: var(--parchment);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.1rem;
+  line-height: 1.78;
 }
 
-.font-serif {
-  font-family: var(--font-playfair);
+/* Typography hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-cormorant);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+::selection {
+  background-color: #C9A84C28;
+  color: #1A1208;
+}
+
+/* Font utility classes */
+.font-serif    { font-family: var(--font-cormorant); }
+.font-display  { font-family: var(--font-playfair); }
+.font-cinzel   { font-family: var(--font-cinzel); }
+.font-arabic   { font-family: 'Scheherazade New', serif; direction: rtl; }
+
+/* Section label — Cinzel small caps style */
+.label-caps {
+  font-family: var(--font-cinzel);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
 }
 
 /* Gold ornament divider */
@@ -39,22 +71,30 @@ body {
   content: '';
   flex: 1;
   height: 1px;
-  background: linear-gradient(to right, transparent, #C9A84C, transparent);
+  background: linear-gradient(to right, transparent, #C9A84C70, transparent);
 }
 .ornament::after {
-  background: linear-gradient(to left, transparent, #C9A84C, transparent);
+  background: linear-gradient(to left, transparent, #C9A84C70, transparent);
 }
 
-.font-arabic {
-  font-family: 'Cairo', Arial, sans-serif;
-  direction: rtl;
+/* Book-rule divider (for sections) */
+.book-rule {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #C9A84C;
+}
+.book-rule::before,
+.book-rule::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #C9A84C50, transparent);
 }
 
 /* Prevent iOS Safari from zooming on input focus */
 @media (max-width: 640px) {
-  input, select, textarea {
-    font-size: 16px;
-  }
+  input, select, textarea { font-size: 16px; }
 }
 
 /* ── Splash screen ── */
@@ -71,14 +111,14 @@ body {
   30%           { transform: scale(1.3); opacity: 1;   }
 }
 
-.splash-enter          { animation: splashEnter  0.7s cubic-bezier(0.34,1.56,0.64,1) forwards; }
-.splash-delay-1        { opacity: 0; animation: splashFadeUp 0.6s ease-out 0.35s forwards; }
-.splash-delay-2        { opacity: 0; animation: splashFadeUp 0.6s ease-out 0.50s forwards; }
-.splash-delay-3        { opacity: 0; animation: splashFadeUp 0.6s ease-out 0.65s forwards; }
+.splash-enter   { animation: splashEnter  0.7s cubic-bezier(0.34,1.56,0.64,1) forwards; }
+.splash-delay-1 { opacity: 0; animation: splashFadeUp 0.6s ease-out 0.35s forwards; }
+.splash-delay-2 { opacity: 0; animation: splashFadeUp 0.6s ease-out 0.50s forwards; }
+.splash-delay-3 { opacity: 0; animation: splashFadeUp 0.6s ease-out 0.65s forwards; }
 
-/* Hide scrollbars (used for swipe carousels) */
-.scrollbar-hide                    { -ms-overflow-style: none; scrollbar-width: none; }
-.scrollbar-hide::-webkit-scrollbar { display: none; }
+/* Scrollbar hide (swipe carousels) */
+.scrollbar-hide                     { -ms-overflow-style: none; scrollbar-width: none; }
+.scrollbar-hide::-webkit-scrollbar  { display: none; }
 
 /* Section transitions */
 .section-fade {
@@ -89,4 +129,27 @@ body {
 .section-fade.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Drop cap for editorial paragraphs */
+.drop-cap::first-letter {
+  font-family: var(--font-cormorant);
+  font-size: 3.8em;
+  font-weight: 700;
+  line-height: 0.75;
+  float: left;
+  margin-right: 0.09em;
+  margin-top: 0.08em;
+  color: #C9A84C;
+}
+
+/* Elegant blockquote */
+.book-quote {
+  font-family: var(--font-cormorant);
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  border-left: 3px solid #C9A84C;
+  padding-left: 1.5rem;
+  color: #1B3A6B;
 }

@@ -8,6 +8,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        parchment: {
+          DEFAULT: "#F8F3E6",
+          dark:    "#EDE6CF",
+          light:   "#FDFAF3",
+        },
+        ink: "#1A1208",
         byzantine: {
           50:  "#eef2f9",
           100: "#d4dff0",
@@ -34,8 +40,10 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        serif: ["var(--font-playfair)", "Georgia", "serif"],
+        sans:    ["var(--font-garamond)",  "Georgia", "serif"],
+        serif:   ["var(--font-cormorant)", "Georgia", "serif"],
+        display: ["var(--font-playfair)",  "Georgia", "serif"],
+        cinzel:  ["var(--font-cinzel)",    "Georgia", "serif"],
       },
       animation: {
         "fade-up": "fadeUp 0.6s ease-out forwards",
@@ -43,11 +51,11 @@ const config: Config = {
       },
       keyframes: {
         fadeUp: {
-          "0%": { opacity: "0", transform: "translateY(24px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
+          "0%":   { opacity: "0", transform: "translateY(24px)" },
+          "100%": { opacity: "1", transform: "translateY(0)"     },
         },
         fadeIn: {
-          "0%": { opacity: "0" },
+          "0%":   { opacity: "0" },
           "100%": { opacity: "1" },
         },
       },

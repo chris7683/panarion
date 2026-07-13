@@ -79,7 +79,7 @@ export default function PublishingPage() {
           }}
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-gold-300 text-sm font-semibold uppercase tracking-widest mb-3">Publishing</p>
+          <p className="label-caps text-gold-300 mb-4">Publishing</p>
           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white max-w-2xl leading-tight mb-4">
             Bringing the Fathers' Voices to Every Reader
           </h1>
@@ -95,7 +95,7 @@ export default function PublishingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-14 items-center">
             <div>
-              <p className="text-gold-500 text-sm font-semibold uppercase tracking-widest mb-3">
+              <p className="label-caps text-gold-500 mb-4">
                 Our Approach
               </p>
               <h2 className="font-serif text-3xl sm:text-4xl font-bold text-byzantine-700 mb-5 leading-tight">
@@ -128,7 +128,7 @@ export default function PublishingPage() {
                 {languages.map((l) => (
                   <div
                     key={l.lang}
-                    className="flex items-center gap-3 bg-[#FAFAF8] border border-gray-100 rounded-xl p-3.5 hover:border-gold-300 transition-all group"
+                    className="flex items-center gap-3 bg-parchment border border-gray-100 rounded-xl p-3.5 hover:border-gold-300 transition-all group"
                   >
                     <div className="w-9 h-9 rounded-lg bg-byzantine-600 text-gold-400 font-serif font-bold flex items-center justify-center text-lg shrink-0 group-hover:bg-gold-400 group-hover:text-white transition-colors">
                       {l.flag}
@@ -146,10 +146,10 @@ export default function PublishingPage() {
       </section>
 
       {/* Publishing Series */}
-      <section className="py-12 sm:py-20 bg-[#FAFAF8]">
+      <section className="py-12 sm:py-20 bg-parchment">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-14">
-            <p className="text-gold-500 text-sm font-semibold uppercase tracking-widest mb-3">
+            <p className="label-caps text-gold-500 mb-4">
               Our Catalog
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-byzantine-700 mb-4">
@@ -210,7 +210,7 @@ export default function PublishingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-14 items-start">
             <div>
-              <p className="text-gold-500 text-sm font-semibold uppercase tracking-widest mb-3">
+              <p className="label-caps text-gold-500 mb-4">
                 Distribution
               </p>
               <h2 className="font-serif text-3xl sm:text-4xl font-bold text-byzantine-700 mb-5">
@@ -227,7 +227,7 @@ export default function PublishingPage() {
                     className={`flex items-start gap-4 p-4 rounded-xl border transition-all ${
                       dp.primary
                         ? "bg-byzantine-50 border-byzantine-200"
-                        : "bg-[#FAFAF8] border-gray-100 hover:border-gold-200"
+                        : "bg-parchment border-gray-100 hover:border-gold-200"
                     }`}
                   >
                     <MapPin
@@ -250,7 +250,7 @@ export default function PublishingPage() {
             </div>
 
             {/* Publishing plan */}
-            <div id="plan" className="bg-[#FAFAF8] rounded-3xl p-8 border border-gray-100">
+            <div id="plan" className="bg-parchment rounded-3xl p-8 border border-gray-100">
               <h3 className="font-serif text-2xl font-bold text-byzantine-700 mb-5">
                 Publishing Plan & Projects
               </h3>

@@ -7,8 +7,8 @@ import SplashScreen from "@/components/SplashScreen";
 export const metadata: Metadata = {
   title: "Panarion Center for Patristic Heritage",
   description:
-    "Panarion Center is dedicated to preserving and promoting Eastern Christian patristic heritage through education, publishing, and academic engagement.",
-  keywords: ["patristic", "heritage", "Eastern Christianity", "publishing", "education", "theology"],
+    "Panarion Center — Πανάριον — is dedicated to preserving and promoting Eastern Christian patristic heritage through education, publishing, and academic engagement.",
+  keywords: ["patristic", "heritage", "Eastern Christianity", "publishing", "education", "theology", "Panarion", "Epiphanius"],
   openGraph: {
     title: "Panarion Center for Patristic Heritage",
     description: "Preserving Eastern Christian patristic heritage through scholarship.",
@@ -26,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col bg-[#FAFAF8]">
+      <body className="min-h-screen flex flex-col bg-parchment text-ink">
         <SplashScreen />
         <Navbar />
         <main className="flex-1">{children}</main>

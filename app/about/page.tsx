@@ -71,7 +71,7 @@ export default function AboutPage() {
           }}
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-gold-300 text-sm font-semibold uppercase tracking-widest mb-3">About Us</p>
+          <p className="label-caps text-gold-300 mb-4">About Us</p>
           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white max-w-2xl leading-tight mb-4">
             Panarion Center for Patristic Heritage
           </h1>
@@ -102,7 +102,7 @@ export default function AboutPage() {
             </div>
 
             <div>
-              <p className="text-gold-500 text-sm font-semibold uppercase tracking-widest mb-3">
+              <p className="label-caps text-gold-500 mb-4">
                 The Name
               </p>
               <h2 className="font-serif text-3xl sm:text-4xl font-bold text-byzantine-700 mb-5 leading-tight">
@@ -133,7 +133,7 @@ export default function AboutPage() {
       <section className="py-12 sm:py-20 bg-[#FAFAF8]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-14">
-            <p className="text-gold-500 text-sm font-semibold uppercase tracking-widest mb-3">
+            <p className="label-caps text-gold-500 mb-4">
               Our Purpose
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-byzantine-700 mb-4">
@@ -185,7 +185,7 @@ export default function AboutPage() {
       <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-14">
-            <p className="text-gold-500 text-sm font-semibold uppercase tracking-widest mb-3">
+            <p className="label-caps text-gold-500 mb-4">
               Our Journey
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-byzantine-700">
